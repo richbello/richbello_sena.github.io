@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Tienda de Muebles</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-5OthUq5WszK7tEk8z5c8fdn1uWhO3d3r3u7FX6c6fFQ30gJc1DW12A0F5WctVUp8" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        .logo {
+            max-width: 250px; /* Aumenta el tamaño del logo */
+        }
+        .navbar-custom {
+            background-color: #f8f9fa;
+            padding: 10px;
+            position: relative;
+        }
+        .navbar-custom .container {
+            display: flex;
+            justify-content: center; /* Centra el logo horizontalmente */
+            align-items: center; /* Alinea verticalmente */
+        }
+        .navbar-custom .nav-items {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .navbar-custom a {
+            color: #343a40;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+        .banner {
+            background: url('images/home-5526692_1920.jpg.jpg') no-repeat center center;
+            background-size: cover;
+            height: 300px;
+        }
+        .product-card {
+            margin-bottom: 20px;
+        }
+        .product-card img {
+            display: block; /* Hace que la imagen sea un bloque */
+            margin: 0 auto 10px; /* Centra la imagen horizontalmente y ajusta el margen inferior */
+            max-width: 100%; /* Mantiene la imagen dentro del contenedor */
+            height: auto; /* Mantiene la proporción de la imagen */
+        }
+        .product-card .card-body {
+            text-align: center; /* Centra el texto en el cuerpo de la tarjeta */
+            padding-top: 5px; /* Reduce el padding superior del cuerpo de la tarjeta */
+        }
+        .product-card .card-title {
+            font-size: 1.5rem; /* Ajusta el tamaño del texto */
+            font-weight: bold; /* Aplica negrilla al texto */
+            margin-bottom: 5px; /* Reduce el espaciado inferior */
+        }
+        .product-card .card-text {
+            font-size: 1.25rem; /* Aumenta el tamaño del texto del precio */
+            font-weight: bold; /* Aplica negrilla al precio */
+            margin-top: 0; /* Elimina el margen superior del precio */
+            margin-bottom: 10px; /* Ajusta el margen inferior del precio */
+        }
+        .offer-banner {
+            background-color: #ffeb3b;
+            padding: 10px;
+            text-align: center;
+        }
+        .testimonials {
+            text-align: center; /* Centra el texto en la sección de testimonios */
+            margin-top: 20px; /* Ajusta el margen superior para separación */
+        }
+        .testimonials .card-body {
+            padding: 5px; /* Reduce el padding en la sección de testimonios */
+        }
+        .testimonials .card-text {
+            margin-bottom: 0; /* Elimina el margen inferior en los textos de testimonios */
+            margin-top: 0; /* Elimina el margen superior en los textos de testimonios */
+        }
+        .testimonials .card-title {
+            margin-top: 5px; /* Ajusta el margen superior entre el testimonio y el nombre del cliente */
+            margin-bottom: 0; /* Elimina el margen inferior entre el nombre del cliente y el siguiente testimonio */
+        }
+        footer {
+            text-align: center; /* Centra el texto en el pie de página */
+            padding: 10px; /* Reduce el padding en el pie de página */
+            margin-top: 20px; /* Ajusta el margen superior para separación */
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de navegación superior -->
+    <nav class="navbar navbar-custom">
+        <div class="container">
+            <a href="#" class="navbar-brand">
+                <img src="images/logo.png.png" alt="Logo de la tienda" class="logo">
+            </a>
+            <div class="nav-items">
+                <a href="#" class="ms-3"><i class="bi bi-heart"></i></a>
+                <a href="login.html" class="ms-3">Iniciar Sesión</a>
+                <a href="registrarse.html" class="ms-3">Registrarse</a>
+                <a href="carrito de compras.html" class="ms-3"><i class="bi bi-cart"></i></a>
+                <a href="comedores.html" class="ms-3">Outlet</a>
+                <a href="contacto.html" class="ms-3">Contacto</a>
+                
+            </div>
+        </div>
+        <!-- Nueva sección de enlaces debajo del logo, alineados horizontalmente -->
+        <div class="container mt-2">
+            <div class="d-flex justify-content-center">
+                
+              
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner Principal -->
+    <div class="banner"></div>
+
+    <!-- Sección de Ofertas Especiales -->
+    <div class="offer-banner">
+        <h1>¡Ofertas Especiales!</h1>
+        <p class="big-text">Hasta un 50% de descuento en muebles seleccionados. ¡No te lo pierdas!</p>
+    </div>
+    
+    <!-- Sección de Productos Destacados -->
+    <div class="container mt-4">
+        <h2 class="text-center mb-4">Productos Destacados</h2>
+        <div class="row">
+
+
+            <div class="col-md-4">
+                <div class="card product-card">
+                  <img src="images/sofa_7347875_640. jpg.jpg" class="card-img-top" alt="Sofá Elegante">
+                  <div class="card-body">
+                    <h5 class="card-title">Sofá Elegante</h5>
+                    <p class="card-text">$499.99</p><a href="#" class="btn btn-primary">Ver Detalles</a>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+            <!-- Producto 2 -->
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="images/dinning_table_4272043_640.jpg.jpg" class="card-img-top" alt="Mesa de Comedor">
+                    <div class="card-body">
+                        <h5 class="card-title">Mesa de Comedor</h5>
+                        <p class="card-text">$299.99</p>
+                        <a href="#" class="btn btn-primary">Ver Detalles</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 3 -->
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="images/ai_generated_8959800_640.jpg.jpg" class="card-img-top" alt="Silla Moderna">
+                    <div class="card-body">
+                        <h5 class="card-title">Silla Moderna</h5>
+                        <p class="card-text">$89.99</p>
+                        <a href="#" class="btn btn-primary">Ver Detalles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de Testimonios -->
+    <div class="container mt-4 testimonials">
+        <h2 class="text-center mb-4">Lo que dicen nuestros clientes</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">"Excelente calidad y servicio. ¡Muy recomendados!"</p>
+                        <h5 class="card-title">María Gómez</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">"Un excelente lugar para encontrar muebles modernos a buen precio."</p>
+                        <h5 class="card-title">Juan Pérez</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">"¡Un servicio al cliente excepcional!"</p>
+                        <h5 class="card-title">Ana Rodríguez</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Tienda de Muebles. Todos los derechos reservados.</p>
+    </footer>
+    
