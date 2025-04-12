@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,21 +7,44 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-5OthUq5WszK7tEk8z5c8fdn1uWhO3d3r3u7FX6c6fFQ30gJc1DW12A0F5WctVUp8" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
   <style>
-        .product-image {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-        }
-        .table th, .table td {
-            vertical-align: middle;
-        }
-        .carrito-titulo {
-            color: #f5a623; /* Amarillo mostaza */
-        }
-        .resumen-titulo, .btn-resumen {
-            color: #f5a623; /* Amarillo mostaza */
-        }
-  </style>
+    /* Fondo de la página */
+    body {
+        background-color: #ffeb3b; /* Fondo amarillo claro */
+    }
+
+    /* Estilos para las imágenes de productos */
+    .product-image {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+
+    /* Alineación de celdas en la tabla */
+    .table th, .table td {
+        vertical-align: middle;
+    }
+
+    /* Título del carrito de compras */
+    .carrito-titulo {
+        color: #000000; /* Amarillo mostaza */
+    }
+
+    /* Títulos y botones de resumen */
+    .resumen-titulo, .btn-resumen {
+        color:#000000
+
+    /* Estilos para los botones en el resumen */
+    .btn-resumen {
+        background-color: #f5a623; /* Amarillo mostaza */
+        border-color: #f5a623; /* Amarillo mostaza */
+    }
+
+    .btn-resumen:hover {
+        background-color: #c77a20; /* Amarillo mostaza más oscuro */
+        border-color: #c77a20; /* Amarillo mostaza más oscuro */
+    }
+</style>
+
 </head>
 <body>
   <div class="container mt-5">
@@ -41,7 +63,7 @@
         </thead>
         <tbody>
           <tr>
-            <td><img src="https://via.placeholder.com/100" alt="Imagen del producto" class="product-image"></td>
+            <td><img src="images/oferta_especial.png" alt="Imagen del producto" class="product-image"></td>
             <td>Producto 1</td>
             <td>$10.00</td>
             <td><input type="number" class="form-control" value="1" min="1"></td>
@@ -69,77 +91,3 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-GLhlTQH8pLozj2Kt8gObQ4F4enY1fPrP7vNCsMfF7bISn27u9Z6I3K2l7pLQ7T3" crossorigin="anonymous"></script>
 </body>
 </html>
-
-=======
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carrito de Compras</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-5OthUq5WszK7tEk8z5c8fdn1uWhO3d3r3u7FX6c6fFQ30gJc1DW12A0F5WctVUp8" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-  <style>
-        .product-image {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-        }
-        .table th, .table td {
-            vertical-align: middle;
-        }
-        .carrito-titulo {
-            color: #f5a623; /* Amarillo mostaza */
-        }
-        .resumen-titulo, .btn-resumen {
-            color: #f5a623; /* Amarillo mostaza */
-        }
-  </style>
-</head>
-<body>
-  <div class="container mt-5">
-    <h1 class="mb-4 carrito-titulo">Carrito de Compras</h1>
-    <div class="table-responsive">
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th>Imagen</th>
-            <th>Producto</th>
-            <th>Precio</th>
-            <th>Cantidad</th>
-            <th>Total</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><img src="https://via.placeholder.com/100" alt="Imagen del producto" class="product-image"></td>
-            <td>Producto 1</td>
-            <td>$10.00</td>
-            <td><input type="number" class="form-control" value="1" min="1"></td>
-            <td>$10.00</td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="d-flex justify-content-end mt-4">
-      <div class="card p-3">
-        <h4 class="mb-3 resumen-titulo">Resumen</h4>
-        <div class="d-flex justify-content-between mb-2">
-          <span>Subtotal</span> <span>$50.00</span>
-        </div>
-        <div class="d-flex justify-content-between mb-2">
-          <span>Envío</span> <span>$5.00</span>
-        </div>
-        <div class="d-flex justify-content-between mb-3">
-          <span>Total</span> <span>$55.00</span>
-        </div><button class="btn btn-primary w-100 btn-resumen">Proceder al Pago</button>
-      </div>
-    </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-GLhlTQH8pLozj2Kt8gObQ4F4enY1fPrP7vNCsMfF7bISn27u9Z6I3K2l7pLQ7T3" crossorigin="anonymous"></script>
-</body>
-</html>
-
->>>>>>> fdad912227711299dc692007ba6e2a066c677a8e

@@ -92,3 +92,56 @@ h1 {
     font-size: 16px;
     color: #fff; /* Texto en blanco para que resalte sobre el fondo */
 }
+
+.logo {
+    max-width: 70px; /* Tamaño máximo inicial */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Asegura que se comporte como un bloque si es necesario */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    transition: transform 0.2s ease; /* Efecto suave al cambiar el tamaño */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Aumenta un 10% al pasar el mouse */
+}
+/* styles.css */
+body {
+    background-color: #ffeb3b; /* Fondo amarillo claro */
+    font-family: Arial, sans-serif; /* Fuente predeterminada */
+    margin: 0;
+    padding: 0;
+    color: #333; /* Color de texto para mayor legibilidad */
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.comedor {
+    width: 22%; /* Tamaño flexible de los comedores */
+    margin: 15px 0;
+    text-align: center;
+    background-color: white; /* Fondo blanco para cada comedor */
+    padding: 20px;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.comedor img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Bordes redondeados para las imágenes */
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #000000; /* Color del título */
+}
+
+body {
+    background-color: #ffeb3b; /* Fondo amarillo claro */
+}
