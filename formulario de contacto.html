@@ -6,7 +6,6 @@
     <title>Formulario de Contacto</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     
     <style>
@@ -80,6 +79,63 @@
             </div>
         </div>
     </section>
-    <script src="index.js"></script>
+
+    <script>
+        // Obtener el formulario y el botón de enviar
+        const contactoForm = document.getElementById("contacto");
+
+        // Asegurarse de que el formulario está escuchando el evento submit correctamente
+        contactoForm.addEventListener("submit", async (event) => {
+            event.preventDefault();  // Prevenir el envío tradicional del formulario
+
+            // Obtener los valores del formulario
+            const nombre = document.getElementById("nombre").value;
+            const apellido = document.getElementById("apellido").value;
+            const correo = document.getElementById("correo").value;
+            const sexo = document.querySelector('input[name="sexo"]:checked') ? document.querySelector('input[name="sexo"]:checked').value : '';
+            const mensaje = document.getElementById("mensaje").value;
+
+            // Validar que los campos no estén vacíos
+            if (!nombre || !apellido || !correo || !sexo || !mensaje) {
+                alert("Por favor complete todos los campos.");
+                return;
+            }
+
+            // Crear el objeto que se enviará a la API (reemplaza con tu endpoint real)
+            const datos = {
+                nombre,
+                apellido,
+                correo,
+                sexo,
+                mensaje
+            };
+
+            // Realizar la solicitud a la API (ajusta la URL de la API si es necesario)
+            try {
+                const response = await fetch("https://tienda-virtual-laravel.onrender.com/api/contacto", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(datos)
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    alert("¡Mensaje enviado correctamente!");
+                    // Limpiar los campos después de enviar
+                    contactoForm.reset();
+                } else {
+                    alert(`Error: ${data.message || "Hubo un problema al enviar el mensaje."}`);
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                alert("Hubo un error al enviar el mensaje.");
+            }
+        });
+    </script>
 </body>
+</html>
+
 
