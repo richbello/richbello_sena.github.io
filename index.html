@@ -25,13 +25,9 @@
         .testimonials .card-body { padding: 5px; }
         .testimonials .card-text { margin-bottom: 0; margin-top: 0; }
         .testimonials .card-title { margin-top: 5px; margin-bottom: 0; }
-        footer { text-align: center; padding: 10px; margin-top: 20px; }
+        footer { text-align: center; padding: 10px; margin-top: 20px; background-color: #343a40; color: white; }
     </style>
 </head>
-<script src="main.js"></script>
-</body>
-</html>
-
 <body>
     <!-- Barra de navegación superior -->
     <nav class="navbar navbar-custom">
@@ -50,7 +46,7 @@
         </div>
     </nav>
 
-    <!-- Banner -->
+    <!-- Banner de oferta -->
     <div class="offer-banner">
         <div class="container">
             <h1>Bienvenido a nuestra tienda</h1>
@@ -59,9 +55,7 @@
                 <section class="banner text-center text-dark" style="background-image: url('https://source.unsplash.com/1600x900/?furniture'); height: 15vh; background-size: cover; background-position: center; border-radius: 12px; margin-bottom: 15px;">
                     <img src="images/oferta_especial.png" alt="Imagen destacada de ofertas especiales" class="logo" width="120">
                 </section>
-                <p class="big-text">
-                    <h2>50% de descuento en muebles seleccionados. ¡No te lo pierdas!</h2>
-                </p>
+                <h2>50% de descuento en muebles seleccionados. ¡No te lo pierdas!</h2>
             </div>
         </div>
     </div>
@@ -107,15 +101,43 @@
 
     <!-- Pie de página -->
     <footer>
-        <footer class="bg-dark text-white text-center py-3"></footer>
         <h3>2024 Muebles Hogar & Decoración. Todos los derechos reservados.</h3>
     </footer>
 
+    <!-- Script para cargar productos -->
     <script>
         // Configuración de Axios
         axios.defaults.withCredentials = true;
         axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
-        // Función para cargar
-::contentReference[oaicite:0]{index=0}
- 
+        // Cargar productos desde la API
+        window.onload = function() {
+            axios.get('http://localhost:8000/api/productos')
+                .then(response => {
+                    const productos = response.data.data;
+                    const productosContainer = document.getElementById('productos-container');
+
+                    productos.forEach(producto => {
+                        const productCard = `
+                            <div class="col-md-4">
+                                <div class="card product-card">
+                                    <img src="images/${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
+                                    <div class="card-body">
+                                        <h5 class="card-title">${producto.nombre}</h5>
+                                        <p class="card-text">$${producto.precio}</p>
+                                        <p class="card-text">${producto.descripcion}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                        productosContainer.innerHTML += productCard;
+                    });
+                })
+                .catch(error => {
+                    console.error('Error al cargar los productos:', error);
+                });
+        }
+    </script>
+
+</body>
+</html>
